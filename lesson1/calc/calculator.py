@@ -8,9 +8,9 @@ def sum(m, n):
         return m
 
 
-def div(m, n):
+def divide(m, n):
     if n == 0:
-        raise Exception('Cant divide by 0')
+        raise ZeroDivisionError('Cant divide by 0')
     n_a = abs(n)
     m_a = abs(m)
     div = 0
@@ -24,7 +24,10 @@ def div(m, n):
 
 
 print(sum(3, 5))
-print(div(3, -1))
-print(div(-3, 1))
-print(div(-3, -1))
-print(div(3, 0))
+print(divide(3, -1))
+print(divide(-3, 1))
+print(divide(-3, -1))
+try:
+    print(divide(3, 0))
+except Exception:
+    print("divide by 0")
