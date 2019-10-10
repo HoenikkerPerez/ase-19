@@ -1,4 +1,4 @@
-import calc.calculator as c
+import lesson1.calc.calculator as c
 # prova pull req
 class FooCalculator:
     def __init__(self):
@@ -8,7 +8,7 @@ class FooCalculator:
         return c.sum(m, n)
     
     def div(self, m, n):
-        return c.div(m, n)
+        return c.divide(m, n)
 
 my_calc = FooCalculator()
 print(my_calc.sum(3, 5))
